@@ -14,7 +14,6 @@ class MainViewModel : ViewModel() {
         _shoes.value = mutableListOf()
     }
 
-    private val lst =  mutableListOf<Shoe>()
     fun updateShoes(shoe: Shoe) {
        _shoes.value?.add(shoe)
     }

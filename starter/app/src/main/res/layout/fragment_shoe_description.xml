@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
+    <!--  I use  ConstraintLayout because in each row i have 2 elements -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,6 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
+            tools:text="air max"
             app:layout_constraintStart_toEndOf="@+id/name_label"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,12 +60,14 @@
             android:id="@+id/size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            tools:text="39"
             app:layout_constraintStart_toStartOf="@+id/name"
             app:layout_constraintTop_toTopOf="@+id/size_label" />
 
         <TextView
             android:id="@+id/company"
             android:layout_width="wrap_content"
+            tools:text="Nike"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/size"
             app:layout_constraintTop_toTopOf="@+id/company_label" />
@@ -75,6 +76,7 @@
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            tools:text = "description"
             app:layout_constraintStart_toStartOf="@+id/company"
             app:layout_constraintTop_toTopOf="@+id/description_label" />
     </androidx.constraintlayout.widget.ConstraintLayout>

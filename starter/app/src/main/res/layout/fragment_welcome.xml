@@ -2,15 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
 
-    </data>
-
+    <!--    I use because i wanted button be between text and bottom of screen-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorGray">
-
 
         <TextView
             android:id="@+id/welcome"
@@ -40,8 +37,8 @@
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_store"
             android:contentDescription="@string/store"
+            android:src="@drawable/ic_store"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

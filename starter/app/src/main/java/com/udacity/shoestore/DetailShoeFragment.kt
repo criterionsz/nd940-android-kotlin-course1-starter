@@ -22,6 +22,7 @@ class DetailShoeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail_shoe, container, false)
+        binding.shoe = Shoe("", 0.0, "", "")
         binding.cancel.setOnClickListener {
             findNavController().popBackStack()
         }
@@ -33,14 +34,12 @@ class DetailShoeFragment : Fragment() {
                 Toast.makeText(requireContext(), "Fill all fields", Toast.LENGTH_LONG).show()
             } else {
                 binding.company
-                vm.updateShoes(
-                    Shoe(
-                        binding.editName.text.toString(),
-                        binding.editShoeSize.text.toString().toDouble(),
-                        binding.editCompany.text.toString(),
-                        binding.description.text.toString()
+                binding.shoe?.let {
+                    vm.updateShoes(
+                        it
                     )
-                )
+                }
+
                 findNavController().popBackStack()
             }
         }

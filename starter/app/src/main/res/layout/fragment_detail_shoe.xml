@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+    <!--  I use  ConstraintLayout because in each row i have 2 elements -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,6 +34,7 @@
             android:autofillHints="@string/shoe_name"
             android:ems="10"
             android:inputType="text"
+            android:text="@={shoe.name}"
             app:layout_constraintBottom_toTopOf="@+id/edit_company"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -55,6 +63,7 @@
             android:ems="10"
             android:inputType="text"
             android:labelFor="@id/company"
+            android:text="@={shoe.company}"
             app:layout_constraintBottom_toTopOf="@+id/edit_shoe_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -70,6 +79,7 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:labelFor="@id/shoe_size"
+            android:text="@={``+shoe.size}"
             app:layout_constraintBottom_toTopOf="@+id/edit_description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -84,6 +94,7 @@
             android:ems="10"
             android:inputType="text"
             android:labelFor="@+id/description"
+            android:text="@={shoe.description}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
